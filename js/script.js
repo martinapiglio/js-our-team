@@ -18,7 +18,29 @@ const teamMembers = [
     createTeamMember('Barbara Ramos', 'Graphic Designer', 'barbara-ramos-graphic-designer.jpg')
 ];
 
+//check: console shows the whole array
 console.log(teamMembers);
+//check
+
+//MILESTONE 1: console shows all the information for each team member 
+for(let i = 0; i < teamMembers.length; i++) {
+
+    let teamMembersElement = teamMembers[i]
+
+    for (let objectKey in teamMembersElement) {
+
+      console.log(teamMembersElement[objectKey]);
+
+    };
+
+};
+
+
+
+
+
+
+
 
 
 
