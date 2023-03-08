@@ -3,24 +3,29 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
 }
 /* /common */
 
 .container {
     background-color: #f5f5f1;
+    color: #67615a;
+    font-family: sans-serif;
 }
 
 .container .inner-container {
     max-width: 700px;
     margin: auto;
-    padding-top: 3rem;
+    padding-top: 3rem;   
 }
 
 .container .inner-container header > * {
     padding-bottom: 1.5rem;
-    font-size: small;
     text-align: center;
+    font-size: 12px;
+}
+
+.container .inner-container header h1 {
+    font-size: 17px;
 }
 
 .container .inner-container #card-container {
@@ -41,6 +46,13 @@
     font-size: small;
     list-style-type: none;
     text-align: center;
+}
+
+.container .inner-container #card-container .card ul li:first-child{
+    padding-bottom: .4rem;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: serif;
 }
 
 .container .inner-container #card-container .card img {
