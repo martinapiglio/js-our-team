@@ -1,0 +1,33 @@
+/* common */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+/* /common */
+
+.container {
+    height: 100vh;
+    background-color: #f5f5f1;
+}
+
+.container .inner-container {
+    max-width: 700px;
+    margin: auto;
+    height: 100%;
+    padding: 3rem 0;
+}
+
+.container .inner-container header > * {
+    padding-bottom: 1rem;
+    font-size: small;
+    text-align: center;
+}
+
+.container .inner-container #card-container {
+    /* TEST */
+    height: 350px;
+    border: 1px solid black;
+    /* /TEST */
+}
