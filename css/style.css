@@ -26,8 +26,10 @@
 }
 
 .container .inner-container #card-container {
+}
+
+img {
     /* TEST */
-    height: 350px;
-    border: 1px solid black;
+        height: 200px;
     /* /TEST */
 }

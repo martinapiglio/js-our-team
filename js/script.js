@@ -22,6 +22,7 @@ const teamMembers = [
 console.log(teamMembers);
 //check
 
+let cardContainer = document.getElementById('card-container');
  
 for (let i = 0; i < teamMembers.length; i++) {
 
@@ -33,7 +34,7 @@ for (let i = 0; i < teamMembers.length; i++) {
         console.log(teamMembersElement[objectKey]);
 
         //MILESTONE 2: show all the information in DOM as string
-        let cardContainer = document.getElementById('card-container');
+        
         let listEl = document.createElement('ul');
 
         let listItem = document.createElement('li');
@@ -47,7 +48,16 @@ for (let i = 0; i < teamMembers.length; i++) {
 
     };
 
+    //BONUS 1: transfrom image string into a real img
+    let image = document.createElement('div');
+
+        console.log(image);
+
+        image.innerHTML = '<img src="img/'+ teamMembersElement.image + '">';
+        cardContainer.append(image);
+
 };
+
 
 
 
