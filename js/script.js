@@ -26,7 +26,29 @@ let cardContainer = document.getElementById('card-container');
  
 for (let i = 0; i < teamMembers.length; i++) {
 
-    let teamMembersElement = teamMembers[i]
+    let teamMembersElement = teamMembers[i];
+
+    let card = document.createElement('div');
+    card.classList.add('card');
+
+    let listEl = document.createElement('ul');
+
+    //BONUS 1: transfrom image string into a real img
+    let image = document.createElement('div');
+
+    image.innerHTML = '<img src="img/'+ teamMembersElement.image + '">';
+    card.append(image);
+    //BONUS1
+
+    let listItemName = document.createElement('li');
+    listItemName.innerText = teamMembersElement.name;
+    listEl.append(listItemName);
+
+    let listItemRole = document.createElement('li');
+    listItemRole.innerText = teamMembersElement.role;
+    listEl.append(listItemRole);
+
+    card.append(listEl);
 
     for (let objectKey in teamMembersElement) {
 
@@ -34,32 +56,17 @@ for (let i = 0; i < teamMembers.length; i++) {
         console.log(teamMembersElement[objectKey]);
 
         //MILESTONE 2: show all the information in DOM as string
-        
-        let listEl = document.createElement('ul');
+        // let listItem = document.createElement('li');
+        // listItem.innerText = teamMembersElement[objectKey];
 
-        let listItem = document.createElement('li');
-        listEl.append(listItem);
-        listItem.innerText = objectKey + ': ' + teamMembersElement[objectKey];
-
-        listEl.style.fontSize = "small";
-        listEl.style.paddingLeft = "2rem";
-
-        cardContainer.append(listEl);
+        // listEl.append(listItem);
+        // card.append(listEl);
 
     };
 
-    //BONUS 1: transfrom image string into a real img
-    let image = document.createElement('div');
-
-        console.log(image);
-
-        image.innerHTML = '<img src="img/'+ teamMembersElement.image + '">';
-        cardContainer.append(image);
+    cardContainer.append(card);
 
 };
-
-
-
 
 
 //FUNCTION: create an object with three keys-------------------------------------------------------

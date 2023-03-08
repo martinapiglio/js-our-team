@@ -8,28 +8,42 @@
 /* /common */
 
 .container {
-    height: 100vh;
     background-color: #f5f5f1;
 }
 
 .container .inner-container {
     max-width: 700px;
     margin: auto;
-    height: 100%;
-    padding: 3rem 0;
+    padding-top: 3rem;
 }
 
 .container .inner-container header > * {
-    padding-bottom: 1rem;
+    padding-bottom: 1.5rem;
     font-size: small;
     text-align: center;
 }
 
 .container .inner-container #card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-img {
-    /* TEST */
-        height: 200px;
-    /* /TEST */
+.container .inner-container #card-container .card {
+    width: 30%;
+    margin-bottom: 2rem;
+    background-color: white;
+} 
+
+.container .inner-container #card-container .card ul {
+    padding: .7rem;
+    
+    font-size: small;
+    list-style-type: none;
+    text-align: center;
+}
+
+.container .inner-container #card-container .card img {
+    display: block;
+    width: 100%;
 }
