@@ -7,3 +7,32 @@ MILESTONE 2: Stampare le stesse informazioni su DOM sottoforma di stringhe
 BONUS 1: Trasformare la stringa foto in una immagine effettiva
 BONUS 2: Organizzare i singoli membri in card/schede
 */
+
+//MILESTONE 0: Create an array of objects (with following information: name, role, photo)
+const teamMembers = [
+    createTeamMember('Wayne Barnett', 'Founder & CEO', 'wayne-barnett-founder-ceo.jpg'),
+    createTeamMember('Angela Caroll', 'Chief Editor', 'angela-caroll-chief-editor.jpg'),
+    createTeamMember('Walter Gordon', 'Office Manager', 'walter-gordon-office-manager.jpg'),
+    createTeamMember('Angela Lopez', 'Social Media Manager', 'angela-lopez-social-media-manager.jpg'),
+    createTeamMember('Scott Estrada', 'Developer', 'scott-estrada-developer.jpg'),
+    createTeamMember('Barbara Ramos', 'Graphic Designer', 'barbara-ramos-graphic-designer.jpg')
+];
+
+console.log(teamMembers);
+
+
+
+//FUNCTION: create an object with three keys-------------------------------------------------------
+function createTeamMember(fullName, role, photo) {
+
+    let teamMember;
+    
+    teamMember = {
+      name: fullName,
+      role: role,
+      image: photo,
+    };
+
+    return teamMember;
+
+};
