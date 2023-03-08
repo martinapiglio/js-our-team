@@ -22,42 +22,32 @@ const teamMembers = [
 console.log(teamMembers);
 //check
 
-//MILESTONE 1: console shows all the information for each team member 
+ 
 for (let i = 0; i < teamMembers.length; i++) {
 
     let teamMembersElement = teamMembers[i]
 
     for (let objectKey in teamMembersElement) {
 
-      console.log(teamMembersElement[objectKey]);
+        //MILESTONE 1: console shows all the information for each team member
+        console.log(teamMembersElement[objectKey]);
 
-    };
-
-};
-
-//MILESTONE 2: show all the information in DOM as string
-let cardContainer = document.getElementById('card-container');
-let listEl = document.createElement('ul');
-
-for (let i = 0; i < teamMembers.length; i++) {
-
-    let teamMembersElement = teamMembers[i]
-
-    for (let objectKey in teamMembersElement) {
+        //MILESTONE 2: show all the information in DOM as string
+        let cardContainer = document.getElementById('card-container');
+        let listEl = document.createElement('ul');
 
         let listItem = document.createElement('li');
         listEl.append(listItem);
         listItem.innerText = objectKey + ': ' + teamMembersElement[objectKey];
-    
+
+        listEl.style.fontSize = "small";
+        listEl.style.paddingLeft = "2rem";
+
+        cardContainer.append(listEl);
+
     };
 
 };
-
-listEl.style.fontSize = "small";
-listEl.style.paddingLeft = "2rem";
-
-cardContainer.append(listEl);
-
 
 
 
