@@ -34,9 +34,9 @@ for (let i = 0; i < teamMembers.length; i++) {
     let listEl = document.createElement('ul');
 
     //BONUS 1: transfrom image string into a real img
-    let image = document.createElement('div');
+    let image = document.createElement('img');
 
-    image.innerHTML = '<img src="img/'+ teamMembersElement.image + '">';
+    image.src = 'img/'+ teamMembersElement.image;
     card.append(image);
     //BONUS1
 
